@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Registration Form</title>
+</head>
+<body>
+  <!-- Background -->
+  <div id="vanta-bg"></div>
+
+  <!-- Form -->
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form id="myForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <small class="error-message" style="display:none;color:red;"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+        <small class="error-message" style="display:none;color:red;"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" />
+        <small class="error-message" style="display:none;color:red;"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <small class="error-message" style="display:none;color:red;"></small>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Success Message -->
+    <p class="success-message" style="display:none;color:green;font-weight:bold;"></p>
+  </div>
+
+  <!-- Vanta.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+
+  <script>
+    VANTA.FOG({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      highlightColor: 0xa6a298,
+      midtoneColor: 0xc2655c,
+      lowlightColor: 0x3d2992
+    })
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
